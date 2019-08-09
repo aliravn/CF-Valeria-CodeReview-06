@@ -7,7 +7,7 @@ addTaskButton.click(addTask);
 var id = 1;
 function addTask(){
 	taskList.append(
-		`<div class="list">
+		`<div class="list" id="task${id}">
 			<p>${input.val()}</p>
 			<button class="doneButton" id="done${id}"><i class="fas fa-check-square"></i></button>
 			<button class="removeButton" id="rmv${id}"><i class="fas fa-times-circle"></i></button>
@@ -15,6 +15,7 @@ function addTask(){
 	console.log(id);
 	$(`#rmv${id}`).click(removeTask);
 	$(`#done${id}`).click(markDone).dblclick(markNotDone);
+	$(`#task${id}`).addClass("open");
 	id +=1;
 	console.log(id);
 }
