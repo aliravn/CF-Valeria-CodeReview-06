@@ -4,10 +4,6 @@ body {
   font-family: "Roboto", sans-serif;
   width: 95%; }
 
-p, h1 {
-  margin: 0;
-  padding: 0; }
-
 /* HEADER SECTION */
 header {
   width: 100%;
@@ -22,6 +18,22 @@ header {
     font-weight: bold; }
 
 /* MAIN SECTION */
+#headline {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+  #headline h1 {
+    margin: 0;
+    padding: 0; }
+
+p {
+  width: 80%;
+  margin: 0 auto;
+  align-self: flex-start; }
+  p span {
+    font-weight: bold; }
+
 main {
   width: 100%;
   min-height: 70vw;
@@ -35,13 +47,6 @@ main {
   width: 80%;
   margin: 0 auto 5vw;
   display: flex; }
-
-h1, p {
-  width: 80%;
-  margin: 0 auto;
-  align-self: flex-start; }
-  h1 span, p span {
-    font-weight: bold; }
 
 #input {
   width: 80%;
