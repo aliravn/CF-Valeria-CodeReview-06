@@ -22,6 +22,8 @@ function addTask(){
 	$(`#task${id}`).addClass("open");
 	id +=1;
 	displayCounter();
+	input.val("");
+	console.log(input.val());
 	input.focus();
 }
 
