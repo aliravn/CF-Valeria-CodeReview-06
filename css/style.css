@@ -57,7 +57,8 @@ h1, p {
   border: 1px solid black;
   border-radius: 5px;
   font-weight: bold;
-  color: #ffffff; }
+  color: #ffffff;
+  font-size: 2vw; }
 
 #tasks {
   width: 80%;

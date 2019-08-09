@@ -14,7 +14,7 @@ function addTask() {
 	taskList.append(
 		`<div class="list" id="task${id}">
 			<p>${input.val()}</p>
-			<button class="fasButton doneButton" id="done${id}"><i class="fas fa-check-square"></i></button>
+			<button class="fasButton doneButton" id="done${id}"><i class="fas fa-check-circle"></i></button>
 			<button class="fasButton openButton" id="open${id}"><i class="fas fa-undo-alt"></i></button>
 			<button class="fasButton removeButton" id="rmv${id}"><i class="fas fa-times-circle"></i></button>
 		</div>`);
