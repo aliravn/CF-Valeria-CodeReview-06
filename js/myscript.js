@@ -75,3 +75,9 @@ function showSelected() {
 		taskList.children().show();
   	}
 };
+
+$("#input").keypress(function(event) {
+    if (event.which == 13) {
+        addTaskButton.click();
+    }
+});
