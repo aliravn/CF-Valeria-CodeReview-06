@@ -1,6 +1,7 @@
 const addTaskButton = $("#addTask");
 const taskList = $("#tasks");
 const input = $("#input");
+input.focus();
 
 var counterAll = 0;
 var counterOpen = counterAll;
@@ -20,21 +21,21 @@ function addTask(){
 	$(`#done${id}`).click(markDone);
 	$(`#open${id}`).click(markOpen).hide();
 	$(`#task${id}`).addClass("open");
+	$(`#task${id}`).draggable({
+    	containment: '#tasks'
+  	});
 	id +=1;
 	displayCounter();
-	input.val("");
-	console.log(input.val());
-	input.focus();
+	input.val("").focus();
+	// input.focus();
 }
 
 function removeTask() {
-	console.log("helo from removeTaskbutton");
 	$(this).closest('.list').remove();
 	displayCounter();
 }
 
 function markDone() {
-	console.log("helo from markDoneButton");
 	$(this).closest(".list").removeClass("open").addClass("done");
 	$(this).hide();
 	$(this).siblings(".openButton").show();
@@ -42,7 +43,6 @@ function markDone() {
 }
 
 function markOpen() {
-	console.log("helo from markOpen");
 	$(this).closest('.list').removeClass("done").addClass("open");
 	$(this).hide();
 	$(this).siblings(".doneButton").show();
