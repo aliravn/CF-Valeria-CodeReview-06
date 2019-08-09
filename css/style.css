@@ -65,28 +65,23 @@ h1, p {
   margin: 1vw auto; }
 
 .list {
-  width: 100%;
+  width: 99%;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  border: 0.2vw solid black;
-  border-radius: 5px;
+  padding: 0.5vw 0;
   margin-bottom: 1vw;
-  padding: 0.5vw 0; }
+  border-radius: 5px;
+  border: 0.5vw solid black; }
   .list p {
     width: 90%;
+    margin: 0;
     align-self: center; }
-  .list button {
-    width: 4.5%;
-    padding: 0;
-    margin-right: 0.5vw;
-    height: 4vw;
-    display: flex; }
+
+.fasButton {
+  margin-right: 0.5vw; }
 
 .fas {
-  font-size: 3vw;
-  width: 100%;
-  align-self: center; }
+  font-size: 3vw; }
 
 .done {
   background-color: lightgrey; }
