@@ -59,6 +59,7 @@ main {
   border: 1px solid black;
   border-radius: 5px; }
   .list p {
-    margin-left: 1vw; }
+    margin-left: 1vw;
+    text-align: justify; }
 
 /*# sourceMappingURL=style.css.map */
