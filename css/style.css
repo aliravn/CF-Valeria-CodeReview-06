@@ -54,15 +54,19 @@ main {
 
 .list {
   width: 100%;
-  height: auto;
+  height: 6vw;
   background: lightgreen;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   border: 1px solid black;
   border-radius: 5px;
   margin-bottom: 1vw; }
   .list p {
-    margin-left: 1vw;
-    text-align: justify; }
+    width: 90%;
+    margin-left: 1vw; }
+  .list .fas {
+    margin-right: 1vw;
+    font-size: 4vw; }
 
 /*# sourceMappingURL=style.css.map */
