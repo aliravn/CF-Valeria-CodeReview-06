@@ -11,7 +11,9 @@ addTaskButton.click(addTask);
 
 var id = 1;
 function addTask() {
-	taskList.append(
+	if (input.val().length == 0) {
+		alert("Cannot add empty task.");
+	} else { taskList.append(
 		`<div class="list" id="task${id}">
 			<p>${input.val()}</p>
 			<button class="fasButton doneButton" id="done${id}"><i class="fas fa-check-circle"></i></button>
@@ -24,8 +26,8 @@ function addTask() {
 	$(`#task${id}`).addClass("open");
 	id +=1;
 	displayCounter();
-	input.val("").focus();
-	// input.focus();
+	input.val("").focus(); // after each task added clear input field and focus on it
+	}
 }
 
 function removeTask() {
