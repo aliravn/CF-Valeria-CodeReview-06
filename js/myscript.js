@@ -1,6 +1,7 @@
 const addTaskButton = $("#addTask");
 const taskList = $("#tasks");
 const input = $("#input");
+const emptyMessage = "Cannot add an empty task.\nTo-do list should have some info, right?\nTry again and add some text.";
 input.focus();
 taskList.sortable({cursor:"move"});
 
@@ -12,7 +13,7 @@ addTaskButton.click(addTask);
 var id = 1;
 function addTask() {
 	if (input.val().length == 0) {
-		alert("Cannot add empty task.");
+		alert(emptyMessage);
 	} else { taskList.append(
 		`<div class="list" id="task${id}">
 			<p>${input.val()}</p>
