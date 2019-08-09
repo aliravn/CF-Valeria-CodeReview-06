@@ -48,7 +48,8 @@ h1, p {
   border: 1px solid black;
   border-right: none;
   border-radius: 5px 0 0 5px;
-  padding-left: 1vw; }
+  padding-left: 1vw;
+  font-size: 2vw; }
 
 #addTask {
   width: 20%;
