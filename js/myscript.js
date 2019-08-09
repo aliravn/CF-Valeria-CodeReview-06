@@ -2,6 +2,7 @@ const addTaskButton = $("#addTask");
 const taskList = $("#tasks");
 const input = $("#input");
 input.focus();
+taskList.sortable();
 
 var counterAll = 0;
 var counterOpen = counterAll;
@@ -21,9 +22,6 @@ function addTask(){
 	$(`#done${id}`).click(markDone);
 	$(`#open${id}`).click(markOpen).hide();
 	$(`#task${id}`).addClass("open");
-	$(`#task${id}`).draggable({
-    	containment: '#tasks'
-  	});
 	id +=1;
 	displayCounter();
 	input.val("").focus();
