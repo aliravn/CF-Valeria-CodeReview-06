@@ -22,10 +22,10 @@ function removeTask() {
 
 function markDone() {
 	console.log("helo from markDoneButton");
-	$(this).closest('.list').css("background-color", "lightgreen");
+	$(this).closest('.list').addClass("done");
 }
 
 function markNotDone() {
 	console.log("helo from markDoneButton");
-	$(this).closest('.list').css("background-color", "white");
+	$(this).closest('.list').removeClass("done");
 }
