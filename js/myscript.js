@@ -1,12 +1,10 @@
 const addTaskButton = $("#addTask");
-const input = $("#input");
 const taskList = $("#tasks");
+const input = $("#input");
 
 addTaskButton.click(addTask);
+
 function addTask(){
-	// console.log("hello from addTaskButton");
-	// console.log(input.val());
-	var div = document.createElement("div");
 	taskList.append(
 		`<div class="list">
 			<p>${input.val()}</p>
@@ -14,10 +12,20 @@ function addTask(){
 			<button class="removeButton"><i class="fas fa-times-circle"></i></button>
 		</div>`);
 	$(".removeButton").click(removeTask);
+	$(".doneButton").click(markDone).dblclick(markNotDone);
 }
-
 
 function removeTask() {
 	console.log("helo from removeTaskbutton");
 	$(this).closest('.list').remove();
+}
+
+function markDone() {
+	console.log("helo from markDoneButton");
+	$(this).closest('.list').css("background-color", "lightgreen");
+}
+
+function markNotDone() {
+	console.log("helo from markDoneButton");
+	$(this).closest('.list').css("background-color", "white");
 }
