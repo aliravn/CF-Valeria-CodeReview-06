@@ -6,8 +6,15 @@ addTaskButton.click(addTask);
 function addTask(){
 	console.log("hello from addTaskButton");
 	console.log(input.val());
-	var taskText = document.createTextNode(input.val());
-	var div = document.createElement("div")
-	div.append(taskText);  
-	taskList.append(div);
+	taskList.append(
+		`<div class="list">
+			<p>${input.val()}</p>
+			<i class="fas fa-check-square"></i>
+			<i class="fas fa-times-circle"></i>
+		</div>`);
 }
+
+// function createTask() {
+// 	var taskText = document.createTextNode(input.val());
+
+// }
