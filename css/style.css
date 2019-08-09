@@ -59,7 +59,8 @@ main {
   display: flex;
   align-items: center;
   border: 1px solid black;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin-bottom: 1vw; }
   .list p {
     margin-left: 1vw;
     text-align: justify; }
