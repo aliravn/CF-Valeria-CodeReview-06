@@ -2,7 +2,7 @@ const addTaskButton = $("#addTask");
 const taskList = $("#tasks");
 const input = $("#input");
 input.focus();
-taskList.sortable();
+taskList.sortable({cursor:"move"});
 
 var counterAll = 0;
 var counterOpen = counterAll;
