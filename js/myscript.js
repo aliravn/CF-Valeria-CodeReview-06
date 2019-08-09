@@ -4,17 +4,20 @@ const taskList = $("#tasks");
 
 addTaskButton.click(addTask);
 function addTask(){
-	console.log("hello from addTaskButton");
-	console.log(input.val());
+	// console.log("hello from addTaskButton");
+	// console.log(input.val());
+	var div = document.createElement("div");
 	taskList.append(
 		`<div class="list">
 			<p>${input.val()}</p>
-			<i class="fas fa-check-square"></i>
-			<i class="fas fa-times-circle"></i>
+			<button class="doneButton"><i class="fas fa-check-square"></i></button>
+			<button class="removeButton"><i class="fas fa-times-circle"></i></button>
 		</div>`);
+	$(".removeButton").click(removeTask);
 }
 
-// function createTask() {
-// 	var taskText = document.createTextNode(input.val());
 
-// }
+function removeTask() {
+	console.log("helo from removeTaskbutton");
+	$(this).closest('.list').remove();
+}
