@@ -2,6 +2,7 @@ const addTaskButton = $("#addTask");
 const taskList = $("#tasks");
 const input = $("#input");
 const emptyMessage = "Cannot add an empty task.\nTo-do list should have some info, right?\nTry again and add some text.";
+
 input.focus();
 taskList.sortable({cursor:"move"});
 
@@ -41,6 +42,7 @@ function markDone() {
 	$(this).hide();
 	$(this).siblings(".openButton").show();
 	displayCounter();
+	showSelected();
 }
 
 function markOpen() {
@@ -48,6 +50,7 @@ function markOpen() {
 	$(this).hide();
 	$(this).siblings(".doneButton").show();
 	displayCounter();
+	showSelected();
 }
 
 function displayCounter() {
@@ -56,3 +59,19 @@ function displayCounter() {
 	$("#counterAll").text(counterAll);
 	$("#counterOpen").text(counterOpen);
 }
+
+$('#select').change(showSelected);
+
+function showSelected() {
+	if ($("#select").val() == "open") {
+		$(".open").show();
+		$(".done").hide();
+  	}
+	if ($("#select").val() == "done") {
+		$(".done").show();
+		$(".open").hide();
+  	}	
+  	if ($("#select").val() == "all") {
+		taskList.children().show();
+  	}
+};

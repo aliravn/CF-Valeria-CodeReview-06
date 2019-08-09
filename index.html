@@ -16,6 +16,14 @@
 		<span>TO-DO LIST</span>
 	</header>
 
+	<nav>
+		<select id="select">
+			<option value="all" selected>ALL TASKS</option>
+			<option value="open">OPEN TASKS</option>
+			<option value="done">DONE TASKS</option>
+		</select> 
+	</nav>
+	
 	<main>
 		<div id="newTask">
 			<input type="text" placeholder="Task description..." id="input"/>
@@ -23,7 +31,7 @@
 		</div>
 		
 		<h1>Tasks</h1>
-		<p>There are (<span id="counterAll">0</span>) tasks on your list, (<span id="counterOpen">0</span>) of them are not done yet</p>
+		<p id="counters">There are (<span id="counterAll">0</span>) tasks on your list, (<span id="counterOpen">0</span>) of them are not done yet</p>
 		<div id="tasks">			
 		</div>
 	</main>
