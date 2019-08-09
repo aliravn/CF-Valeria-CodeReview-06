@@ -10,12 +10,12 @@ var counterOpen = counterAll;
 addTaskButton.click(addTask);
 
 var id = 1;
-function addTask(){
+function addTask() {
 	taskList.append(
 		`<div class="list" id="task${id}">
 			<p>${input.val()}</p>
 			<button class="doneButton" id="done${id}"><i class="fas fa-check-square"></i></button>
-			<button class="openButton" id="open${id}"><i class="fas fa-undo-alt"></i></i></button>
+			<button class="openButton" id="open${id}"><i class="fas fa-undo-alt"></i></button>
 			<button class="removeButton" id="rmv${id}"><i class="fas fa-times-circle"></i></button>
 		</div>`);
 	$(`#rmv${id}`).click(removeTask);
