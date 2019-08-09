@@ -1,6 +1,7 @@
 const addTaskButton = $("#addTask");
 const taskList = $("#tasks");
 const input = $("#input");
+
 var counterAll = 0;
 var counterOpen = counterAll;
 
@@ -21,6 +22,7 @@ function addTask(){
 	$(`#task${id}`).addClass("open");
 	id +=1;
 	displayCounter();
+	input.focus();
 }
 
 function removeTask() {

@@ -52,10 +52,11 @@ main {
 #tasks {
   width: 80%;
   margin: 1vw auto; }
+  #tasks span {
+    font-weight: bold; }
 
 .list {
   width: 98%;
-  background: white;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -77,6 +78,9 @@ main {
   align-self: center; }
 
 .done {
+  background-color: lightgrey; }
+
+.open {
   background-color: lightgreen; }
 
 .doneButton {
