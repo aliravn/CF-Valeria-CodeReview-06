@@ -12,10 +12,12 @@ function addTask(){
 		`<div class="list" id="task${id}">
 			<p>${input.val()}</p>
 			<button class="doneButton" id="done${id}"><i class="fas fa-check-square"></i></button>
+			<button class="openButton" id="open${id}"><i class="fas fa-check-square"></i></button>
 			<button class="removeButton" id="rmv${id}"><i class="fas fa-times-circle"></i></button>
 		</div>`);
 	$(`#rmv${id}`).click(removeTask);
-	$(`#done${id}`).click(markDone).dblclick(markOpen);
+	$(`#done${id}`).click(markDone);
+	$(`#open${id}`).click(markOpen).hide();
 	$(`#task${id}`).addClass("open");
 	id +=1;
 	displayCounter();
@@ -29,13 +31,17 @@ function removeTask() {
 
 function markDone() {
 	console.log("helo from markDoneButton");
-	$(this).closest('.list').removeClass("open").addClass("done");
+	$(this).closest(".list").removeClass("open").addClass("done");
+	$(this).hide();
+	$(this).siblings(".openButton").show();
 	displayCounter();
 }
 
 function markOpen() {
 	console.log("helo from markOpen");
 	$(this).closest('.list').removeClass("done").addClass("open");
+	$(this).hide();
+	$(this).siblings(".doneButton").show();
 	displayCounter();
 }
 
