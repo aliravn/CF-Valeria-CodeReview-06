@@ -11,6 +11,10 @@ taskList.sortable({cursor:"move"});
 var counterAll = 0;
 var counterOpen = counterAll;
 
+$("#startButton").click(function(){
+	$("section").hide();
+});
+
 addTaskButton.click(addTask);
 
 var id = 1;
