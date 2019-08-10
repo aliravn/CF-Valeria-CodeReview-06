@@ -19,7 +19,6 @@ $("#startButton").click(function(){
 });
 
 addTaskButton.click(addTask);
-var id = 1;
 function addTask() {
 	if (input.val().length == 0) {
 		alert(emptyMessage);
@@ -43,7 +42,6 @@ function addTask() {
 		$(p).append(text);
 		$(div).append(p, doneButton, openButton, removeButton);
 		taskList.append(div);
-		id +=1;
 		displayCounter(); 
 		showSelected();
 		input.val("").focus(); // after each task added clear input field and focus on it
