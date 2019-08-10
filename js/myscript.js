@@ -1,3 +1,6 @@
+// CONSTANTS AREA
+// note: text constants can be storen in json and fetched later when elements are created
+
 const addTaskButton = $("#addTask");
 const taskList = $("#tasks");
 const input = $("#input");
@@ -6,18 +9,23 @@ const doneIcon = `<i class="fas fa-check-circle"></i>`;
 const openIcon = `<i class="fas fa-undo-alt"></i>`;
 const removeIcon = `<i class="fas fa-times-circle"></i>`;
 
+// counters for tasks to be displayed to user
 var counterAll = 0;
 var counterOpen = counterAll;
 
-input.val("").focus();
+// taskList is made sortable (drag & drop)
 taskList.sortable({cursor:"move"});
-// $("#headline, #counters").hide();
 
+// Button on "Front page" which hides the instructions and puts input field in focus
 $("#startButton").click(function(){
 	$("#start-page").hide();
 	input.val("").focus();
 });
 
+// add event handler onto addTaskButton
+// function addTask, that creates html-elements, adds classes, adds event handlers on buttons
+// function acts as constructor, creating elements and putting them todether
+// created to get rid of HTML inside js code 
 addTaskButton.click(addTask);
 function addTask() {
 	if (input.val().length == 0) {
@@ -68,9 +76,10 @@ function displayCounter() {
 	counterOpen = $(".open").length;
 	$("#counterAll").text(counterAll);
 	$("#counterOpen").text(counterOpen);
-	// $("#headline, #counters").show();
 }
 
+// Button select triggered by change of selector value
+// function for selector button to show/hide elements based on their class
 $('#select').change(showSelected);
 
 function showSelected() {
@@ -87,6 +96,7 @@ function showSelected() {
   	}
 };
 
+// function to add tasks upon click on Enterkey
 $("#input").keypress(function(event) {
     if (event.which == 13) {
         addTaskButton.click();
