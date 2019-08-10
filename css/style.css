@@ -57,7 +57,7 @@ header {
 /* MAIN SECTION */
 #headline {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 1vw;
   display: flex; }
   #headline h1 {
     width: 80%;
@@ -143,7 +143,7 @@ main {
   background-color: lightgrey; }
 
 .open {
-  background-color: lightblue; }
+  background-color: #3399ff; }
 
 .doneButton {
   color: green; }
