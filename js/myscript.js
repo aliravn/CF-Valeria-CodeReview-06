@@ -2,6 +2,9 @@ const addTaskButton = $("#addTask");
 const taskList = $("#tasks");
 const input = $("#input");
 const emptyMessage = "Cannot add an empty task.\nTo-do list should have some info, right?\nTry again and add some text.";
+const doneIcon = `<i class="fas fa-check-circle"></i>`;
+const openIcon = `<i class="fas fa-undo-alt"></i>`;
+const removeIcon = `<i class="fas fa-times-circle"></i>`;
 
 var counterAll = 0;
 var counterOpen = counterAll;
@@ -23,10 +26,11 @@ function addTask() {
 	} else { taskList.append(
 		`<div class="list" id="task${id}">
 			<p>${input.val()}</p>
-			<button class="fasButton doneButton" id="done${id}"><i class="fas fa-check-circle"></i></button>
-			<button class="fasButton openButton" id="open${id}"><i class="fas fa-undo-alt"></i></button>
-			<button class="fasButton removeButton" id="rmv${id}"><i class="fas fa-times-circle"></i></button>
+			<button class="fasButton doneButton" id="done${id}">${doneIcon}</button>
+			<button class="fasButton openButton" id="open${id}">${openIcon}</button>
+			<button class="fasButton removeButton" id="rmv${id}">${removeIcon}</button>
 		</div>`);
+	
 	$(`#rmv${id}`).click(removeTask);
 	$(`#done${id}`).click(markDone);
 	$(`#open${id}`).click(markOpen).hide();
