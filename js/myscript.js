@@ -43,7 +43,6 @@ function addTask() {
 function removeTask() {
 	$(this).closest('.list').remove();
 	displayCounter();
-	input.val("").focus();
 }
 
 function markDone() {
@@ -52,7 +51,6 @@ function markDone() {
 	$(this).siblings(".openButton").show();
 	displayCounter();
 	showSelected();
-	input.val("").focus();
 }
 
 function markOpen() {
@@ -61,7 +59,6 @@ function markOpen() {
 	$(this).siblings(".doneButton").show();
 	displayCounter();
 	showSelected();
-	input.val("").focus();
 }
 
 function displayCounter() {
