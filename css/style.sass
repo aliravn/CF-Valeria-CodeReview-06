@@ -1,48 +1,44 @@
 $fontFamilyRobotoMain: 'Roboto', sans-serif
+$fontSizeMain: 2vw
 
-html
-	height: 100%
+
 
 body
 	margin: 0 auto
-	font-size: 2vw
 	font-family: $fontFamilyRobotoMain
+	font-size: $fontSizeMain
 	height: 100%
 	width: 95%
 
 /* HEADER SECTION*/
 header
 	width: 100%
-	height: 10vw
+	height: 240px
 	background-color: lightblue
-	font-size: 7vw
-	display: flex
-	justify-content: center
-	align-items: center
-	span
-		font-size: 7vw
-		font-weight: bold
-
+	background-image: url("../img/cloud1.png")
+	background-repeat: no-repeat /*repeat-x*/
+	background-position: center top
 
 /* MAIN SECTION*/
 #headline
 	width: 80%
 	margin: 0 auto
 	display: flex
-	justify-content: space-between
 	h1
+		width: 80%
 		margin: 0
 		padding: 0
+		
 
 #select
 	width: 20%
 	border: 1px solid black
 	border-radius: 5px
 	text-align: center
-	font-size: 2vw
+	font-size: $fontSizeMain
 	font-weight: bold
 
-p
+#counters
 	width: 80%
 	margin: 0 auto
 	align-self: flex-start
@@ -65,12 +61,12 @@ main
 
 #input
 	width: 80%
-	height: 4vw
+	height: 4rem
 	border: 1px solid black
 	border-right: none
 	border-radius: 5px 0 0 5px 
 	padding-left: 1vw
-	font-size: 2vw
+	font-size: $fontSizeMain
 
 #addTask
 	width: 20%
@@ -79,7 +75,7 @@ main
 	border-radius: 5px
 	font-weight: bold
 	color: #ffffff
-	font-size: 2vw
+	font-size: $fontSizeMain
 
 #tasks
 	width: 80%
@@ -102,6 +98,7 @@ main
 		margin: 0
 		margin-left: 1vw
 		align-self: center
+		font-size: $fontSizeMain
 
 .fasButton
 	margin-right: .5vw

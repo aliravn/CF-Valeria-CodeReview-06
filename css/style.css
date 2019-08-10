@@ -1,33 +1,26 @@
-html {
-  height: 100%; }
-
 body {
   margin: 0 auto;
-  font-size: 2vw;
   font-family: "Roboto", sans-serif;
+  font-size: 2vw;
   height: 100%;
   width: 95%; }
 
 /* HEADER SECTION */
 header {
   width: 100%;
-  height: 10vw;
+  height: 240px;
   background-color: lightblue;
-  font-size: 7vw;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  header span {
-    font-size: 7vw;
-    font-weight: bold; }
+  background-image: url("../img/cloud1.png");
+  background-repeat: no-repeat;
+  background-position: center top; }
 
 /* MAIN SECTION */
 #headline {
   width: 80%;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between; }
+  display: flex; }
   #headline h1 {
+    width: 80%;
     margin: 0;
     padding: 0; }
 
@@ -39,11 +32,11 @@ header {
   font-size: 2vw;
   font-weight: bold; }
 
-p {
+#counters {
   width: 80%;
   margin: 0 auto;
   align-self: flex-start; }
-  p span {
+  #counters span {
     font-weight: bold; }
 
 main {
@@ -61,7 +54,7 @@ main {
 
 #input {
   width: 80%;
-  height: 4vw;
+  height: 4rem;
   border: 1px solid black;
   border-right: none;
   border-radius: 5px 0 0 5px;
@@ -97,7 +90,8 @@ main {
     width: 90%;
     margin: 0;
     margin-left: 1vw;
-    align-self: center; }
+    align-self: center;
+    font-size: 2vw; }
 
 .fasButton {
   margin-right: 0.5vw; }
