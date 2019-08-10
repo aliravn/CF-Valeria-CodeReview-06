@@ -5,7 +5,7 @@ body {
   margin: 0 auto;
   min-width: 700px;
   max-width: 1200px;
-  width: 95%;
+  width: 70%;
   height: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 1.7vw; }
@@ -20,7 +20,8 @@ header {
 #start-page {
   background-color: white;
   margin: 0 auto;
-  width: 80vw;
+  width: 70vw;
+  min-width: 700px;
   position: absolute;
   top: 350px;
   left: 50%;
@@ -35,11 +36,11 @@ header {
   #start-page-container * {
     display: flex;
     align-items: center; }
-  #start-page-container button {
-    height: 3vw;
-    padding: 0.5vw 0; }
+  #start-page-container i {
+    font-size: 1.5vw;
+    align-self: center; }
   #start-page-container p {
-    width: 70%;
+    width: 80%;
     margin: 1vw auto;
     text-align: justify; }
   #start-page-container p:nth-child(1) {
@@ -49,7 +50,9 @@ header {
     padding-left: 8vw; }
 
 #startButton {
-  margin: 5% auto 2vw; }
+  margin: 5% auto 2vw;
+  height: 3vw;
+  font-size: 2vw; }
 
 /* MAIN SECTION */
 #headline {
