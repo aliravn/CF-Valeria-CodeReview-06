@@ -1,18 +1,17 @@
 body {
   margin: 0 auto;
-  font-family: "Roboto", sans-serif;
-  font-size: 2vw;
+  min-width: 700px;
+  max-width: 1200px;
+  width: 95%;
   height: 100%;
-  width: 95%; }
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7vw; }
 
 /* HEADER SECTION */
 header {
   width: 100%;
   height: 240px;
-  background-color: lightblue;
-  background-image: url("../img/cloud1.png");
-  background-repeat: no-repeat;
-  background-position: center top; }
+  background: lightblue url("../img/cloud1.png") no-repeat center top; }
 
 /* MAIN SECTION */
 #headline {
@@ -29,8 +28,10 @@ header {
   border: 1px solid black;
   border-radius: 5px;
   text-align: center;
-  font-size: 2vw;
-  font-weight: bold; }
+  font-size: 1.7vw;
+  font-weight: bold;
+  padding-left: 0.5vw;
+  background: white; }
 
 #counters {
   width: 80%;
@@ -49,30 +50,29 @@ main {
 
 #newTask {
   width: 80%;
-  margin: 0 auto 5vw;
+  margin: 0 auto 8vw;
   display: flex; }
 
 #input {
   width: 80%;
-  height: 4rem;
+  height: 3rem;
   border: 1px solid black;
   border-right: none;
-  border-radius: 5px 0 0 5px;
+  border-radius: 10px 0 0 10px;
   padding-left: 1vw;
-  font-size: 2vw; }
+  font-size: 1.7vw; }
 
 #addTask {
   width: 20%;
-  background-color: green;
+  background-color: lightblue;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
   font-weight: bold;
-  color: #ffffff;
-  font-size: 2vw; }
+  font-size: 1.7vw; }
 
 #tasks {
   width: 80%;
-  height: 58vw;
+  height: 60vw;
   margin: 1vw auto;
   overflow: auto;
   overflow-x: hidden;
@@ -91,7 +91,7 @@ main {
     margin: 0;
     margin-left: 1vw;
     align-self: center;
-    font-size: 2vw; }
+    font-size: 1.7vw; }
 
 .fasButton {
   margin-right: 0.5vw; }
@@ -103,7 +103,7 @@ main {
   background-color: lightgrey; }
 
 .open {
-  background-color: lightgreen; }
+  background-color: lightblue; }
 
 .doneButton {
   color: green; }
