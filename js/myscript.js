@@ -12,7 +12,7 @@ var counterAll = 0;
 var counterOpen = counterAll;
 
 $("#startButton").click(function(){
-	$("section").hide();
+	$("#start-page").hide();
 	input.val("").focus();
 });
 
