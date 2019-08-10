@@ -4,6 +4,8 @@ const input = $("#input");
 const emptyMessage = "Cannot add an empty task.\nTo-do list should have some info, right?\nTry again and add some text.";
 
 input.focus();
+$("#headline, #counters").hide();
+
 taskList.sortable({cursor:"move"});
 
 var counterAll = 0;
@@ -58,6 +60,7 @@ function displayCounter() {
 	counterOpen = $(".open").length;
 	$("#counterAll").text(counterAll);
 	$("#counterOpen").text(counterOpen);
+	$("#headline, #counters").show();
 }
 
 $('#select').change(showSelected);
