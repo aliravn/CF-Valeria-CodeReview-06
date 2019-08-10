@@ -30,15 +30,9 @@ function addTask() {
 		var openButton = document.createElement("button");
 		var removeButton = document.createElement("button");
 		$(div).addClass("list open");
-		$(doneButton).addClass("fasButton doneButton");
-		$(doneButton).append(doneIcon);
-		$(doneButton).click(markDone);
-		$(openButton).addClass("fasButton openButton");
-		$(openButton).append(openIcon);
-		$(openButton).click(markOpen).hide();
-		$(removeButton).addClass("fasButton removeButton");
-		$(removeButton).append(removeIcon);
-		$(removeButton).click(removeTask);
+		$(doneButton).addClass("fasButton doneButton").append(doneIcon).click(markDone);
+		$(openButton).addClass("fasButton openButton").append(openIcon).click(markOpen).hide();
+		$(removeButton).addClass("fasButton removeButton").append(removeIcon).click(removeTask);
 		$(p).append(text);
 		$(div).append(p, doneButton, openButton, removeButton);
 		taskList.append(div);
