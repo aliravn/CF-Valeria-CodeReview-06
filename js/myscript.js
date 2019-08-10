@@ -23,22 +23,30 @@ var id = 1;
 function addTask() {
 	if (input.val().length == 0) {
 		alert(emptyMessage);
-	} else { taskList.append(
-		`<div class="list" id="task${id}">
-			<p>${input.val()}</p>
-			<button class="fasButton doneButton" id="done${id}">${doneIcon}</button>
-			<button class="fasButton openButton" id="open${id}">${openIcon}</button>
-			<button class="fasButton removeButton" id="rmv${id}">${removeIcon}</button>
-		</div>`);
-	
-	$(`#rmv${id}`).click(removeTask);
-	$(`#done${id}`).click(markDone);
-	$(`#open${id}`).click(markOpen).hide();
-	$(`#task${id}`).addClass("open");
-	id +=1;
-	displayCounter();
-	showSelected();
-	input.val("").focus(); // after each task added clear input field and focus on it
+	} else { 
+		var text = document.createTextNode(input.val());
+		var div = document.createElement("div");
+		var p = document.createElement("p");
+		var doneButton = document.createElement("button");
+		var openButton = document.createElement("button");
+		var removeButton = document.createElement("button");
+		$(div).addClass("list open");
+		$(doneButton).addClass("fasButton doneButton");
+		$(doneButton).append(doneIcon);
+		$(doneButton).click(markDone);
+		$(openButton).addClass("fasButton openButton");
+		$(openButton).append(openIcon);
+		$(openButton).click(markOpen).hide();
+		$(removeButton).addClass("fasButton removeButton");
+		$(removeButton).append(removeIcon);
+		$(removeButton).click(removeTask);
+		$(p).append(text);
+		$(div).append(p, doneButton, openButton, removeButton);
+		taskList.append(div);
+		id +=1;
+		displayCounter(); 
+		showSelected();
+		input.val("").focus(); // after each task added clear input field and focus on it
 	}
 }
 
