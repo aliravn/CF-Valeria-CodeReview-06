@@ -145,4 +145,12 @@ main {
 .removeButton {
   color: red; }
 
+/*MEDIA QUERY */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  #start-page {
+    top: 35%;
+    width: 90%;
+    min-height: 40%;
+    font-size: 3vw; } }
+
 /*# sourceMappingURL=style.css.map */
