@@ -140,10 +140,10 @@ main {
   background-color: #6699ff;
   font-weight: bold; }
 
-.doneButton {
+.fa-check-circle {
   color: green; }
 
-.removeButton {
+.fa-times-circle {
   color: red; }
 
 /*MEDIA QUERY */
