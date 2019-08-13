@@ -34,25 +34,19 @@ function addTask() {
 		var text = document.createTextNode(input.val());
 		var div = document.createElement("div");
 		var p = document.createElement("p");
-		var doneButton = document.createElement("button");
-		var openButton = document.createElement("button");
+		var toggleButton = document.createElement("button");
 		var removeButton = document.createElement("button");
 		$(div).addClass("list open");
-		$(doneButton)
+		$(toggleButton)
 			.addClass("fasButton doneButton")
 			.append(doneIcon)
 			.click(toggle);
-		$(openButton)
-			.addClass("fasButton openButton")
-			.append(openIcon)
-			.click(toggle)
-			.hide();
 		$(removeButton)
 			.addClass("fasButton removeButton")
 			.append(removeIcon)
 			.click(removeTask);
 		$(p).append(text);
-		$(div).append(p, doneButton, openButton, removeButton);
+		$(div).append(p, toggleButton, removeButton);
 		taskList.prepend(div);
 		displayCounter(); 
 		showSelected();
@@ -74,22 +68,16 @@ function removeTask() {
 
 //done undone as toggle with an if else function - change class for done/open when button is pressed
 function toggle() {
-	console.log(this);
-	console.log($(this).closest(".list"));
-	if ($(this).closest("div.list").hasClass("open")) {
-		$(this).closest("div.list").addClass("done").removeClass("open");
-		$(this).hide();
-		$(this).siblings(".openButton").show();
+	if ($(this).closest(".list").hasClass("open")) {
+		$(this).closest(".list").addClass("done").removeClass("open");
+		$(this).html(openIcon);
 	} else {
 		$(this).closest('.list').removeClass("done").addClass("open");
-		$(this).hide();
-		$(this).siblings(".doneButton").show();
+		$(this).html(doneIcon);
 	}
 	displayCounter();
 	showSelected();
 }
-
-
 
 
 function displayCounter() {
