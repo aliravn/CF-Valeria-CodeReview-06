@@ -41,11 +41,11 @@ function addTask() {
 		$(doneButton)
 			.addClass("fasButton doneButton")
 			.append(doneIcon)
-			.click(markDone);
+			.click(toggle);
 		$(openButton)
 			.addClass("fasButton openButton")
 			.append(openIcon)
-			.click(markOpen)
+			.click(toggle)
 			.hide();
 		$(removeButton)
 			.addClass("fasButton removeButton")
@@ -72,22 +72,25 @@ function removeTask() {
 	displayCounter();
 }
 
-//done undone as to\ggle with an if else function
-function markDone() {
-	$(this).closest(".list").removeClass("open").addClass("done");
-	$(this).hide();
-	$(this).siblings(".openButton").show();
+//done undone as toggle with an if else function - change class for done/open when button is pressed
+function toggle() {
+	console.log(this);
+	console.log($(this).closest(".list"));
+	if ($(this).closest("div.list").hasClass("open")) {
+		$(this).closest("div.list").addClass("done").removeClass("open");
+		$(this).hide();
+		$(this).siblings(".openButton").show();
+	} else {
+		$(this).closest('.list').removeClass("done").addClass("open");
+		$(this).hide();
+		$(this).siblings(".doneButton").show();
+	}
 	displayCounter();
 	showSelected();
 }
 
-function markOpen() {
-	$(this).closest('.list').removeClass("done").addClass("open");
-	$(this).hide();
-	$(this).siblings(".doneButton").show();
-	displayCounter();
-	showSelected();
-}
+
+
 
 function displayCounter() {
 	counterAll = $(".list").length;
