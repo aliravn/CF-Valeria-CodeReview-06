@@ -121,13 +121,14 @@ main {
   border-radius: 5px;
   border: 0.3vw solid black; }
   .list p {
-    width: 90%;
+    width: 80%;
     margin: 0 1vw;
+    overflow-wrap: break-word;
     align-self: center;
     font-size: 1.7vw; }
-
-.fasButton {
-  margin-right: 0.5vw; }
+  .list .fasButton {
+    width: 8%;
+    margin-right: 0.5vw; }
 
 .fas {
   font-size: 3vw; }

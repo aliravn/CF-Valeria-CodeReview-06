@@ -38,23 +38,41 @@ function addTask() {
 		var openButton = document.createElement("button");
 		var removeButton = document.createElement("button");
 		$(div).addClass("list open");
-		$(doneButton).addClass("fasButton doneButton").append(doneIcon).click(markDone);
-		$(openButton).addClass("fasButton openButton").append(openIcon).click(markOpen).hide();
-		$(removeButton).addClass("fasButton removeButton").append(removeIcon).click(removeTask);
+		$(doneButton)
+			.addClass("fasButton doneButton")
+			.append(doneIcon)
+			.click(markDone);
+		$(openButton)
+			.addClass("fasButton openButton")
+			.append(openIcon)
+			.click(markOpen)
+			.hide();
+		$(removeButton)
+			.addClass("fasButton removeButton")
+			.append(removeIcon)
+			.click(removeTask);
 		$(p).append(text);
 		$(div).append(p, doneButton, openButton, removeButton);
-		taskList.append(div);
+		taskList.prepend(div);
 		displayCounter(); 
 		showSelected();
 		input.val("").focus(); // after each task added clear input field and focus on it
 	}
 }
 
+// function to add tasks upon click on Enterkey
+$("#input").keypress(function(event) {
+    if (event.which == 13) {
+        addTaskButton.click();
+    }
+});
+
 function removeTask() {
 	$(this).closest('.list').remove();
 	displayCounter();
 }
 
+//done undone as to\ggle with an if else function
 function markDone() {
 	$(this).closest(".list").removeClass("open").addClass("done");
 	$(this).hide();
@@ -96,9 +114,3 @@ function showSelected() {
   	}
 };
 
-// function to add tasks upon click on Enterkey
-$("#input").keypress(function(event) {
-    if (event.which == 13) {
-        addTaskButton.click();
-    }
-});
